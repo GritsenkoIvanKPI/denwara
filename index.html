@@ -761,7 +761,7 @@ p{margin:0}
     radial-gradient(58% 62% at 22% 8%,rgba(243,122,31,.16),transparent 64%),
     radial-gradient(46% 54% at 78% 4%,rgba(195,220,79,.05),transparent 66%);
 }
-.footer__top{display:grid;grid-template-columns:1.55fr 1.05fr .75fr .95fr;gap:3rem;padding-block:4.5rem 3.5rem}
+.footer__top{display:grid;grid-template-columns:1.05fr .95fr 1.15fr .8fr .95fr;gap:2.5rem;padding-block:4.5rem 3.5rem}
 
 /* kolumna 1 - kafel medialny (podmień <img> na <video>, gdy klient dostarczy materiał) */
 .footer__media{position:relative;max-width:20rem;border-radius:var(--r-md);overflow:hidden;aspect-ratio:16/10}
@@ -769,7 +769,9 @@ p{margin:0}
 .footer__media:hover img{transform:scale(1.05)}
 .footer__media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(22,22,21,.5),transparent 58%)}
 
-.footer h4{font-family:var(--f-display);font-weight:600;font-size:.8125rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:1.75rem}
+.footer h4{font-family:var(--f-display);font-weight:600;font-size:.8125rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:1.15rem}
+.footer h4 a{color:inherit;display:inline-block;padding-block:.35rem;transition:color .3s var(--ease-soft)}
+.footer h4 a:hover{color:var(--brand)}
 .footer__nav li + li,.footer__contact li + li{margin-top:.3rem}
 .footer__nav a,.footer__contact a{
   font-size:.9375rem;color:rgba(255,255,255,.66);display:inline-block;padding-block:.3rem;
@@ -823,6 +825,7 @@ p{margin:0}
    ========================================================================== */
 @media (max-width:1200px){
   :root{--gutter:2.5rem;--sec:5.5rem;--sec-sm:3.5rem}
+  .footer__top{grid-template-columns:repeat(3,1fr);gap:2.5rem 2rem}
   .nav{gap:1.4rem;margin-left:.5rem}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .about{grid-template-columns:1fr;gap:2rem}
@@ -853,6 +856,7 @@ p{margin:0}
   .step::after{display:none}
   .step__media{aspect-ratio:16/9}
   .footer__top{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .footer__media{max-width:none}
 }
 @media (max-width:420px){
   /* pigułka w hero: mniejsze awatary + tekst, żeby zmieścić się w dwóch wierszach */
@@ -1665,36 +1669,49 @@ p{margin:0}
       </div>
 
       <div>
+        <h4><a href="#" data-page="arborystyka">Arborystyka</a></h4>
+        <ul class="footer__nav">
+          <li><a href="#" data-page="arborystyka/wycinka-drzew">Wycinka drzew</a></li>
+          <li><a href="#" data-page="arborystyka/wycinka-awaryjna">Wycinka awaryjna 24/7</a></li>
+          <li><a href="#" data-page="arborystyka/kronowanie">Kronowanie i cięcia</a></li>
+          <li><a href="#" data-page="arborystyka/wiazania-koron">Wiązania koron</a></li>
+          <li><a href="#" data-page="arborystyka/frezowanie-pni">Frezowanie pni</a></li>
+          <li><a href="#" data-page="arborystyka/rozdrabnianie-wywoz">Rozdrabnianie i wywóz</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4><a href="#" data-page="ogrody">Architektura krajobrazu</a></h4>
+        <ul class="footer__nav">
+          <li><a href="#" data-page="ogrody/projektowanie">Projektowanie 3D</a></li>
+          <li><a href="#" data-page="ogrody/trawniki">Zakładanie trawników</a></li>
+          <li><a href="#" data-page="ogrody/nasadzenia">Nasadzenia i żywopłoty</a></li>
+          <li><a href="#" data-page="ogrody/bruk">Bruk i nawierzchnie</a></li>
+          <li><a href="#" data-page="ogrody/tarasy">Tarasy</a></li>
+          <li><a href="#" data-page="ogrody/oswietlenie">Oświetlenie ogrodowe</a></li>
+          <li><a href="#" data-page="ogrody/nawadnianie">Nawadnianie i drenaż</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Firma</h4>
+        <ul class="footer__nav">
+          <li><a href="#o-nas">O nas</a></li>
+          <li><a href="#proces">Proces</a></li>
+          <li><a href="#opinie">Opinie</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#" data-page="blog">Blog</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
         <h4>Kontakt</h4>
         <ul class="footer__contact">
           <li><a href="tel:+48500246800">+48 500 246 800</a></li>
           <li><a href="mailto:kontakt@denwara.pl">kontakt@denwara.pl</a></li>
           <li>ul. Puławska 145,<br>02-715 Warszawa</li>
           <li>Pon.–sob. 7:00–20:00</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Szybkie linki</h4>
-        <ul class="footer__nav">
-          <li><a class="is-active" href="#top">Start</a></li>
-          <li><a href="#o-nas">O nas</a></li>
-          <li><a href="#uslugi">Usługi</a></li>
-          <li><a href="#proces">Proces</a></li>
-          <li><a href="#opinie">Opinie</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Nasze usługi</h4>
-        <ul class="footer__nav">
-          <li><a href="#uslugi">Wycinka drzew</a></li>
-          <li><a href="#uslugi">Kronowanie i wiązania</a></li>
-          <li><a href="#uslugi">Projekt i wizualizacja 3D</a></li>
-          <li><a href="#uslugi">Bruk i tarasy</a></li>
-          <li><a href="#uslugi">Nawadnianie i oświetlenie</a></li>
-          <li><a href="#uslugi">Mycie i stała opieka</a></li>
         </ul>
       </div>
     </div>
