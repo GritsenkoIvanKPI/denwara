@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+
+# Podgląd i zrzuty robocze
+temporary screenshots/
+
+# Materiały źródłowe (masters) — do repo trafiają wersje zoptymalizowane w assets/
+/Arboriculture.mp4
+/Landscaping.mp4
+/desktop.png
+
+# Zależności
+node_modules/
